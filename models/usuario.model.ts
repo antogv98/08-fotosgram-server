@@ -42,4 +42,4 @@ interface Iusuario extends Document{
 }
 
 
-export const Usuario = model<Iusuario>('Ususario', usuarioSchema);
+export const Usuario = model<Iusuario>('Usuario', usuarioSchema);

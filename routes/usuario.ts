@@ -139,5 +139,16 @@ userRoutes.post('/update',verificaToken, (req: any, res: Response)=>{
 });
 
 
+//Obtener usuario por token
+
+userRoutes.get('/',[verificaToken],(req:any,res:Response)=>{
+    const usuario=req.usuario;
+    res.json({
+        ok:true,
+        usuario
+    });
+});
+
+
 
 export default userRoutes;

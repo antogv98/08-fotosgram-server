@@ -95,4 +95,12 @@ userRoutes.post('/update', autenticacion_1.verificaToken, function (req, res) {
         });
     });
 });
+//Obtener usuario por token
+userRoutes.get('/', [autenticacion_1.verificaToken], function (req, res) {
+    var usuario = req.usuario;
+    res.json({
+        ok: true,
+        usuario: usuario
+    });
+});
 exports.default = userRoutes;
